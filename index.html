@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-HopE-De - KI-gestützte Hochwasserprognose</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.cdnjs.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logos/logo_ki_hope_transparent.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Space Mono', monospace;
+        }
+        .content-width {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .language-toggle {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            background-color: #1f2937;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header id="mainHeader" class="bg-white border-b border-gray-200 fixed top-0 left-0 w-full z-10">
+        <nav class="content-width px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <div id="headerLogoTitle" class="flex items-center space-x-4">
+                <img id="logoInHeader" src="logos/logo_ki_hope.png" alt="KI-HopE-De Logo" class="h-16">
+                <h1 id="headerTitle" class="hidden text-lg font-bold text-gray-900">KI-HopE-De</h1>
+            </div>
+            <button id="languageToggle" class="language-toggle">English</button>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <div class="bg-white">
+            <div class="content-width py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 id="title" class="text-4xl font-bold text-gray-900 sm:text-5xl lg:text-6xl tracking-tight" data-en="KI-HopE-De" data-de="KI-HopE-De">KI-HopE-De</h1>
+                    <p id="subtitle" class="mt-4 text-xl text-gray-900" data-en="AI-based flood prediction in small river basins in Germany" data-de="KI-gestützte Hochwasserprognose für kleine Einzugsgebiete in Deutschland">KI-gestützte Hochwasserprognose für kleine Einzugsgebiete in Deutschland</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="py-16 bg-gray-50">
+            <div class="content-width px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8" data-en="Motivation" data-de="Motivation">Motivation</h2>
+                <div class="prose max-w-none text-gray-600 leading-relaxed">
+                    <p data-en="Heavy rainfall and flooding are among the most significant natural hazards, with severe consequences for people, the environment, and infrastructure. Small and medium-sized river basins, which are common in Central Europe, are particularly susceptible, as they respond rapidly to extreme weather conditions. This not only drastically shortens the warning time but also amplifies forecast uncertainties. Current hydrological models reach their limits because they fail to adequately capture the complexity and accuracy required for weather prediction and runoff generation. The research project \u201cKI-HopE-De\u201d addresses this gap and aims to make these models more efficient, robust, and flexible."
+                        data-de="Starkregen und Hochwasser stellen eine der größten Naturgefahren dar, mit gravierenden Auswirkungen auf Mensch, Natur und Infrastruktur. Insbesondere kleine und mittlere Flusseinzugsgebiete, wie sie in Mitteleuropa häufig zu finden sind, reagieren schnell auf extreme Wetterbedingungen. Dies führt nicht nur zu drastischen Verkürzungen des Vorwarnfensters, sondern auch verstärkten Unsicherheiten der Vorhersagen. Aktuelle hydrologische Modelle stoßen hier an ihre Grenzen, da sie die Komplexität und Genauigkeit in der Wettervorhersage und Abflussbildung nicht ausreichend erfassen können. Das Forschungsvorhaben \u201eKI-HopE-De\u201c setzt deshalb genau hier an und will diese effizienter, robuster und flexibler gestalten.">
+                        Starkregen und Hochwasser stellen eine der größten Naturgefahren dar, mit gravierenden Auswirkungen auf Mensch, Natur und Infrastruktur. Insbesondere kleine und mittlere Flusseinzugsgebiete, wie sie in Mitteleuropa häufig zu finden sind, reagieren schnell auf extreme Wetterbedingungen. Dies führt nicht nur zu drastischen Verkürzungen des Vorwarnfensters, sondern auch verstärkten Unsicherheiten der Vorhersagen. Aktuelle hydrologische Modelle stoßen hier an ihre Grenzen, da sie die Komplexität und Genauigkeit in der Wettervorhersage und Abflussbildung nicht ausreichend erfassen können. Das Forschungsvorhaben KI-HopE-De setzt deshalb genau hier an und will diese effizienter, robuster und flexibler gestalten.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="goals" class="py-16 bg-white">
+            <div class="content-width px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8" data-en="Objectives and Approach" data-de="Ziele und Vorgehen">Ziele und Vorgehen</h2>
+                <div class="prose max-w-none text-gray-600 leading-relaxed">
+                    <p data-en="Modern artificial intelligence (AI) methods will be explored, developed, and applied to enable a unified, nationwide prediction system for small catchment areas (< 500 km²) in Germany. The project aims to improve forecast accuracy, particularly for extreme events, in these areas. To achieve this, a comprehensive hydro-meteorological dataset will be created, incorporating both measurement and forecast data. This dataset will serve as the foundation for future model training and validation. The focus will be on short-term forecasts (< 48 hours), with several flood forecasting centers directly involved in the project."
+                        data-de="Moderne Methoden der Künstlichen Intelligenz (KI) werden untersucht, entwickelt und eingesetzt, um erstmals eine deutschlandweit einheitliche Prognose in kleinen Einzugsgebieten (< 500 km²) zu ermöglichen und die Vorhersagegenauigkeit bei Extremen in diesen Gebieten zu steigern. Dazu ist geplant, einen umfassenden hydro-meteorologischen Datensatz zu erstellen, der sowohl Mess- als auch Vorhersagedaten enthält und damit die Basis für das zukünftige Training und Abgleichen von Modellen bildet. Als Anwendungsfall dienen Kurzfristvorhersagen (< 48 Stunden). Am Vorhaben sind mehrere Hochwasserzentralen direkt beteiligt.">
+                        Moderne Methoden der Künstlichen Intelligenz (KI) werden untersucht, entwickelt und eingesetzt, um erstmals eine deutschlandweit einheitliche Prognose in kleinen Einzugsgebieten (< 500 km²) zu ermöglichen und die Vorhersagegenauigkeit bei Extremen in diesen Gebieten zu steigern. Dazu ist geplant, einen umfassenden hydro-meteorologischen Datensatz zu erstellen, der sowohl Mess- als auch Vorhersagedaten enthält und damit die Basis für das zukünftige Training und Abgleichen von Modellen bildet. Als Anwendungsfall dienen Kurzfristvorhersagen (< 48 Stunden). Am Vorhaben sind mehrere Hochwasserzentralen direkt beteiligt.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="innovation" class="py-16 bg-gray-50">
+            <div class="content-width px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8" data-en="Innovations and Perspectives" data-de="Innovationen und Perspektiven">Innovationen und Perspektiven</h2>
+                <div class="prose max-w-none text-gray-600 leading-relaxed">
+                    <p data-en="KI-HopE-De will make a significant contribution to public safety and flood protection. The project will deliver an innovative, prototype platform that could potentially be adopted by all flood forecasting centers nationwide. This would effectively reduce the current dependency on and technological advantage of global tech companies. By integrating AI into large-scale natural science simulation models, the project will advance novel use cases, data integration techniques, and adaptive learning methods."
+                        data-de="KI-HopE-De wird ein wesentlicher Beitrag zur öffentlichen Sicherheit und zum Schutz vor Überflutungen geleistet. Geschaffen wird eine innovative, prototypische Plattform, die potentiell von allen Hochwasservorhersagezentren bundesweit übernommen werden könnte. Damit würde auch die momentane Abhängigkeit und der Vorsprung von globalen Techunternehmen effektiv reduziert. Durch neuartige Einbettung von KI in großen, naturwissenschaftlichen Simulationsmodellen werden neue Anwendungsfälle, Datenintegrationstechniken und adaptive Lernmethoden vorangebracht.">
+                        KI-HopE-De wird ein wesentlicher Beitrag zur öffentlichen Sicherheit und zum Schutz vor Überflutungen geleistet. Geschaffen wird eine innovative, prototypische Plattform, die potentiell von allen Hochwasservorhersagezentren bundesweit übernommen werden könnte. Damit würde auch die momentane Abhängigkeit und der Vorsprung von globalen Techunternehmen effektiv reduziert. Durch neuartige Einbettung von KI in großen, naturwissenschaftlichen Simulationsmodellen werden neue Anwendungsfälle, Datenintegrationstechniken und adaptive Lernmethoden vorangebracht.</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partners Section -->
+        <div id="partners" class="py-16 bg-white">
+            <div class="content-width px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8" data-en="Project Partners" data-de="Projektpartner">Projektpartner</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Partner 1 -->
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <img src="logos/logo_kit.svg" alt="KIT Logo" class="h-16 mb-4">
+                        <h3 class="text-l font-bold text-gray-900" data-en="Karlsruhe Institute of Technology" data-de="Karlsruher Institut für Technologie">Karlsruher Institut für Technologie</h3>
+                    </div>
+                    
+                    <!-- Partner 2 -->
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <img src="logos/logo_dwd.png" alt="DWD Logo" class="h-16 mb-4">
+                        <h3 class="text-l font-bold text-gray-900" data-en="German Weather Service" data-de="Deutscher Wetterdienst">Deutscher Wetterdienst</h3>
+                    </div>
+                    
+                    <!-- Partner 3 -->
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <img src="logos/logo_lanuv.svg" alt="LANUV Logo" class="h-16 mb-4">
+                        <h3 class="text-l font-bold text-gray-900" data-en="Federal State Office for Nature, the Environment and Consumer Protection in North Rhine Westphalia" data-de="Landesamt für Natur, Umwelt und Verbraucherschutz Nordrhein-Westfalen">Landesamt für Natur, Umwelt und Verbraucherschutz Nordrhein-Westfalen</h3>
+                    </div>
+                    
+                    <!-- Partner 4 -->
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <img src="logos/logo_lfu.gif" alt="LfU Logo" class="h-16 mb-4">
+                        <h3 class="text-l font-bold text-gray-900" data-en="State Office for the Environment Rhineland-Palatinate" data-de="Landesamt für Umwelt Rheinland-Pfalz">Landesamt für Umwelt Rheinland-Pfalz</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800">
+        <div class="content-width py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="logos/logo_bmbf.jpg" alt="BMBF Logo" class="h-12">
+                    <p class="text-gray-400 text-sm">Gefördert durch: Bundesministerium für Bildung und Forschung<br>FKZ 01IS24088A</p>
+                </div>
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">© 2025 KI-HopE-De</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('languageToggle').addEventListener('click', function () {
+            const isEnglish = this.textContent === 'English';
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-de');
+            });
+            this.textContent = isEnglish ? 'Deutsch' : 'English';
+        });
+        
+        window.addEventListener('scroll', function () {
+            const titleElement = document.getElementById('title');
+            const headerTitle = document.getElementById('headerTitle');
+            const logoMainTitle = document.getElementById('logoMainTitle');
+            const logoInHeader = document.getElementById('logoInHeader');
+            const header = document.getElementById('mainHeader');
+            
+            if (window.scrollY > titleElement.offsetTop + titleElement.offsetHeight) {
+                headerTitle.classList.remove('hidden');
+                logoMainTitle.classList.add('hidden');
+            } else {
+                headerTitle.classList.add('hidden');
+                logoMainTitle.classList.remove('hidden');
+            }
+        });
+        </script>
+</body>
+</html>
