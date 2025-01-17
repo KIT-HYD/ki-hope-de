@@ -121,7 +121,9 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center space-x-4">
                     <img src="logos/logo_bmbf.jpg" alt="BMBF Logo" class="h-24">
-                    <p class="text-gray-400 text-sm" data-en="Sponsored by the Federal Ministry of Education and research" data-de="Gefördert durch das Bundesministerium für Bildung und Forschung">Gefördert durch das Bundesministerium für Bildung und Forschung<br>FKZ 01IS24088A</p>
+                    <p class="text-gray-400 text-sm" data-en="Sponsored by the Federal Ministry of<br>Education and research<br><em>FKZ 01IS24088A</em>" data-de="Gefördert durch das Bundesministerium<br>für Bildung und Forschung<br><em>FKZ 01IS24088A</em>">
+                        Gefördert durch das Bundesministerium<br>für Bildung und Forschung<br><em>FKZ 01IS24088A</em>
+                    </p>
                 </div>
                 <p class="text-gray-400 text-sm mt-4 md:mt-0">© 2025 KI-HopE-De</p>
             </div>
@@ -132,7 +134,8 @@
         document.getElementById('languageToggle').addEventListener('click', function () {
             const isEnglish = this.textContent === 'English';
             document.querySelectorAll('[data-en]').forEach(el => {
-                el.textContent = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-de');
+                const text = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-de');
+                el.innerHTML = text;
             });
             this.textContent = isEnglish ? 'Deutsch' : 'English';
         });
