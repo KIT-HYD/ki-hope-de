@@ -89,38 +89,67 @@
                 <h2 class="text-3xl font-bold text-gray-900 mb-8" data-en="Project Partners" data-de="Projektpartner">Projektpartner</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Partner 1 -->
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <img src="logos/logo_kit.svg" alt="KIT Logo" class="h-16 mb-4">
-                        <h3 class="text-l font-bold text-gray-900" data-en="Karlsruhe Institute of Technology" data-de="Karlsruher Institut für Technologie">Karlsruher Institut für Technologie</h3>
-                    </div>
-                    
+                    <a href="https://www.kit.edu" target="_blank" rel="noopener noreferrer" class="partner-tile">
+                        <div class="bg-gray-50 p-6 rounded-lg flex flex-col h-full">
+                            <img src="logos/logo_kit.svg" alt="KIT Logo" class="h-16 mb-4 object-contain object-left">
+                            <h3 class="text-l font-bold text-gray-900" data-en="Karlsruhe Institute of Technology" data-de="Karlsruher Institut für Technologie">Karlsruher Institut für Technologie</h3>
+                        </div>
+                    </a>
+        
                     <!-- Partner 2 -->
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <img src="logos/logo_dwd.png" alt="DWD Logo" class="h-16 mb-4">
-                        <h3 class="text-l font-bold text-gray-900" data-en="German Weather Service" data-de="Deutscher Wetterdienst">Deutscher Wetterdienst</h3>
-                    </div>
-                    
+                    <a href="https://www.dwd.de" target="_blank" rel="noopener noreferrer" class="partner-tile">
+                        <div class="bg-gray-50 p-6 rounded-lg flex flex-col h-full">
+                            <img src="logos/logo_dwd.png" alt="DWD Logo" class="h-16 mb-4 object-contain">
+                            <h3 class="text-l font-bold text-gray-900" data-en="German Weather Service" data-de="Deutscher Wetterdienst">Deutscher Wetterdienst</h3>
+                        </div>
+                    </a>
+        
                     <!-- Partner 3 -->
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <img src="logos/logo_lanuv.svg" alt="LANUV Logo" class="h-16 mb-4">
-                        <h3 class="text-l font-bold text-gray-900" data-en="Federal State Office for Nature, the Environment and Consumer Protection in North Rhine Westphalia" data-de="Landesamt für Natur, Umwelt und Verbraucherschutz Nordrhein-Westfalen">Landesamt für Natur, Umwelt und Verbraucherschutz Nordrhein-Westfalen</h3>
-                    </div>
-                    
+                    <a href="https://www.lanuv.nrw.de" target="_blank" rel="noopener noreferrer" class="partner-tile">
+                        <div class="bg-gray-50 p-6 rounded-lg flex flex-col h-full">
+                            <img src="logos/logo_lanuv.svg" alt="LANUV Logo" class="h-16 mb-4 object-contain">
+                            <h3 class="text-l font-bold text-gray-900" data-en="Federal State Office for Nature, the Environment and Consumer Protection in North Rhine Westphalia" data-de="Landesamt für Natur, Umwelt und Verbraucherschutz Nordrhein-Westfalen">Landesamt für Natur, Umwelt und Verbraucherschutz Nordrhein-Westfalen</h3>
+                        </div>
+                    </a>
+        
                     <!-- Partner 4 -->
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <img src="logos/logo_lfu.gif" alt="LfU Logo" class="h-16 mb-4">
-                        <h3 class="text-l font-bold text-gray-900" data-en="State Office for the Environment Rhineland-Palatinate" data-de="Landesamt für Umwelt Rheinland-Pfalz">Landesamt für Umwelt Rheinland-Pfalz</h3>
-                    </div>
+                    <a href="https://www.lfu.rlp.de" target="_blank" rel="noopener noreferrer" class="partner-tile">
+                        <div class="bg-gray-50 p-6 rounded-lg flex flex-col h-full">
+                            <img src="logos/logo_lfu.gif" alt="LfU Logo" class="h-16 mb-4 object-contain">
+                            <h3 class="text-l font-bold text-gray-900" data-en="State Office for the Environment Rhineland-Palatinate" data-de="Landesamt für Umwelt Rheinland-Pfalz">Landesamt für Umwelt Rheinland-Pfalz</h3>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
+        
+        <style>
+            .partner-tile {
+                display: block;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .partner-tile:hover {
+                transform: scale(1.03);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .partner-tile > div {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            .object-contain {
+                object-fit: contain;
+            }
+        </style>
     </main>
 
     <footer class="bg-gray-800">
         <div class="content-width py-12 px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <img src="logos/logo_bmbf.jpg" alt="BMBF Logo" class="h-24">
+                    <a href="https://www.bmbf.de" target="_blank" rel="noopener noreferrer">
+                        <img src="logos/logo_bmbf.jpg" alt="BMBF Logo" class="h-24">
+                    </a>
                     <p class="text-gray-400 text-sm" data-en="Sponsored by the Federal Ministry of<br>Education and research<br><em>FKZ 01IS24088A</em>" data-de="Gefördert durch das Bundesministerium<br>für Bildung und Forschung<br><em>FKZ 01IS24088A</em>">
                         Gefördert durch das Bundesministerium<br>für Bildung und Forschung<br><em>FKZ 01IS24088A</em>
                     </p>
