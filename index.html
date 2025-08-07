@@ -6,7 +6,7 @@
     <title>KI-HopE-De - KI-gestützte Hochwasserprognose</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.cdnjs.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="logos/logo_ki_hope_transparent.png" type="image/png">
+    <link rel="icon" href="assets/logos/logo_ki_hope_transparent.png" type="image/png">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -32,7 +32,7 @@
     <header id="mainHeader" class="bg-white border-b border-gray-200 fixed top-0 left-0 w-full z-10">
         <nav class="content-width px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
             <div id="headerLogoTitle" class="flex items-center space-x-4">
-                <img id="logoInHeader" src="logos/logo_ki_hope.png" alt="KI-HopE-De Logo" class="h-16">
+                <img id="logoInHeader" src="assets/logos/logo_ki_hope.png" alt="KI-HopE-De Logo" class="h-16">
                 <h1 id="headerTitle" class="hidden text-lg font-bold text-gray-900">KI-HopE-De</h1>
             </div>
             <button id="languageToggle" class="language-toggle">English</button>
@@ -90,28 +90,28 @@
                     <!-- Partner 1 -->
                     <a href="https://www.iwu.kit.edu/hyd/english/index.php" target="_blank" rel="noopener noreferrer" class="partner-tile">
                         <div class="bg-gray-50 p-6 rounded-lg flex flex-col h-full justify-start">
-                            <img src="logos/logo_kit.svg" alt="KIT Logo" class="h-20 mb-4 object-contain">
+                            <img src="assets/logos/logo_kit.svg" alt="KIT Logo" class="h-20 mb-4 object-contain">
                         </div>
                     </a>
         
                     <!-- Partner 2 -->
                     <a href="https://www.dwd.svg" target="_blank" rel="noopener noreferrer" class="partner-tile">
                         <div class="bg-gray-50 p-6 rounded-lg flex flex-col h-full justify-start">
-                            <img src="logos/logo_dwd.svg" alt="DWD Logo" class="h-20 mb-4 object-contain">
+                            <img src="assets/logos/logo_dwd.svg" alt="DWD Logo" class="h-20 mb-4 object-contain">
                         </div>
                     </a>
         
                     <!-- Partner 3 -->
                     <a href="https://www.lanuk.nrw.de" target="_blank" rel="noopener noreferrer" class="partner-tile">
                         <div class="bg-gray-50 p-6 rounded-lg flex flex-col h-full justify-start">
-                            <img src="logos/logo_lanuk.svg" alt="LANUK Logo" class="h-20 mb-4 object-contain">
+                            <img src="assets/logos/logo_lanuk.svg" alt="LANUK Logo" class="h-20 mb-4 object-contain">
                         </div>
                     </a>
         
                     <!-- Partner 4 -->
                     <a href="https://www.lfu.rlp.de" target="_blank" rel="noopener noreferrer" class="partner-tile">
                         <div class="bg-gray-50 p-6 rounded-lg flex flex-col h-full justify-start">
-                            <img src="logos/logo_lfu.png" alt="LfU Logo" class="h-20 mb-4 object-contain">
+                            <img src="assets/logos/logo_lfu.png" alt="LfU Logo" class="h-20 mb-4 object-contain">
                         </div>
                     </a>
                 </div>
@@ -132,10 +132,67 @@
                 flex-direction: column;
                 height: 100%;
             }
+            .contact-tile {
+                display: block;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .contact-tile:hover {
+                transform: scale(1.03);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
             .object-contain {
                 object-fit: contain;
             }
         </style>
+
+        <div id="contact" class="py-16 bg-gray-50">
+            <div class="content-width px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8" data-en="Contact" data-de="Kontakt">Kontakt</h2>
+                <div class="prose max-w-none text-gray-600 leading-relaxed">
+                    <p data-en="For questions about the KI-HopE-De project, please feel free to contact us. We are happy to provide information about our research, potential collaborations, or technical details about our AI-based flood prediction approach."
+                        data-de="Bei Fragen zum KI-HopE-De Projekt können Sie uns gerne kontaktieren. Wir geben gerne Auskunft über unsere Forschung, mögliche Kooperationen oder technische Details zu unserem KI-basierten Hochwasservorhersageansatz.">
+                        Bei Fragen zum KI-HopE-De Projekt können Sie uns gerne kontaktieren. Wir geben gerne Auskunft über unsere Forschung, mögliche Kooperationen oder technische Details zu unserem KI-basierten Hochwasservorhersageansatz.</p>
+                    
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Contact Person 1 -->
+                        <a href="https://www.iwu.kit.edu/hyd/english/Staff_loritz.php" target="_blank" rel="noopener noreferrer" class="contact-tile">
+                            <div class="bg-white p-6 rounded-lg shadow-sm flex items-center space-x-4 h-full">
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Ralf Loritz</h3>
+                                    <p class="text-gray-600" data-en="Project Coordinator" data-de="Projektkoordinator">Projektkoordinator</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <img src="assets/pictures/Ralf.jpeg" alt="Ralf Loritz" class="w-16 h-16 rounded-full object-cover">
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <!-- Contact Person 2 -->
+                        <a href="https://www.iwu.kit.edu/hyd/english/Staff_Ehret.php" target="_blank" rel="noopener noreferrer" class="contact-tile">
+                            <div class="bg-white p-6 rounded-lg shadow-sm flex items-center space-x-4 h-full">
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Uwe Ehret</h3>
+                                    <p class="text-gray-600" data-en="Project Coordinator" data-de="Projektkoordinator">Projektkoordinator</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <img src="assets/pictures/Uwe.jpeg" alt="Uwe Ehret" class="w-16 h-16 rounded-full object-cover">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="team" class="py-16 bg-white">
+            <div class="content-width px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center" data-en="Our Team & Associated Partners" data-de="Unser Team & Assoziierte Partner">Unser Team & Assoziierte Partner</h2>
+                <div class="text-center">
+                    <img src="assets/pictures/250407_Hope_Kickoff_Gruppenfoto.jpg" alt="KI-HopE-De Team" class="mx-auto rounded-lg shadow-lg max-w-full h-auto">
+                    <p class="mt-4 text-gray-600 text-sm" data-en="April 7, 2025 - KI-HopE-De project kickoff event in Karlsruhe with the KI-HopE-De core team and associated partners" data-de="7. April 2025 - KI-HopE-De Projekt-Kickoff in Karlsruhe mit Kernteam und assoziierten Partnern">7. April 2025 - KI-HopE-De Projekt-Kickoff in Karlsruhe mit Kernteam und assoziierten Partnern</p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="bg-gray-800">
@@ -143,7 +200,7 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center space-x-4">
                     <a href="https://www.bmbf.de" target="_blank" rel="noopener noreferrer">
-                        <img src="logos/logo_bmbf.jpg" alt="BMBF Logo" class="h-24">
+                        <img src="assets/logos/logo_bmbf.jpg" alt="BMBF Logo" class="h-24">
                     </a>
                     <p class="text-gray-400 text-sm" data-en="Sponsored by the Federal Ministry of<br>Education and research<br><em>FKZ 01IS24088A</em>" data-de="Gefördert durch das Bundesministerium<br>für Bildung und Forschung<br><em>FKZ 01IS24088A</em>">
                         Gefördert durch das Bundesministerium<br>für Bildung und Forschung<br><em>FKZ 01IS24088A</em>
